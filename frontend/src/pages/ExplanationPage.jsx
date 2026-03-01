@@ -11,7 +11,7 @@ const ExplanationPage = () => {
     useEffect(() => {
         const fetchUser = async () => {
             try {
-                const response = await fetch(`http://localhost:8000/users/${userId}`);
+                const response = await fetch(`/api/users/${userId}`);
                 if (response.ok) {
                     setUser(await response.json());
                 }

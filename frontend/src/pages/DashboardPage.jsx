@@ -19,8 +19,8 @@ const DashboardPage = () => {
         setLoading(true);
         try {
             const [statsRes, usersRes] = await Promise.all([
-                fetch('http://localhost:8000/dashboard/stats'),
-                fetch('http://localhost:8000/users/suspicious?limit=10')
+                fetch('/api/dashboard/stats'),
+                fetch('/api/users/suspicious?limit=10')
             ]);
 
             if (statsRes.ok && usersRes.ok) {
@@ -192,7 +192,7 @@ const DashboardPage = () => {
                         <tbody>
                             {suspiciousUsers.map((user) => (
                                 <tr key={user.id} className={user.is_fraud ? "row-danger" : ""}>
-                                    <td className="font-mono">{user.id.substring(0, 8)}...</td>
+                                    <td className="font-mono">{user.id.length > 8 ? `${user.id.substring(0, 8)}...` : user.id}</td>
                                     <td>{user.total_orders}</td>
                                     <td>{user.total_returns}</td>
                                     <td>{((user.total_returns / user.total_orders) * 100).toFixed(1)}%</td>

@@ -39,7 +39,7 @@ const UploadPage = () => {
             setStatus('processing');
             setMessage('Processing transactions and running Isolation Forest model...');
 
-            const response = await fetch('http://localhost:8000/upload', {
+            const response = await fetch('/api/upload', {
                 method: 'POST',
                 body: formData,
             });
