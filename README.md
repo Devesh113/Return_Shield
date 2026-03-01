@@ -185,7 +185,8 @@ Checkpoint 6: Deployment
 Dockerized application
 Cloud deployment
 Live demo
-11. End-to-End Workflow
+
+12. End-to-End Workflow
 Upload transaction logs
 Feature engineering
 Anomaly detection
@@ -193,23 +194,24 @@ Risk scoring
 Explainability generation
 Dashboard visualization
 Fraud analyst review
-12. Demo & Video
-Live Demo Link: To be added
-Demo Video Link: To be added
-GitHub Repository: To be added
 
-13. Hackathon Deliverables Summary
+14. Demo & Video
+Live Demo Link: https://return-shield-buy46rns8-deveshs-projects-099e72b3.vercel.app/
+Demo Video Link: https://drive.google.com/file/d/1sXpKmf-h6BmdjqFUEAQbA-q-1lQWrkLw/view?usp=sharing \
+GitHub Repository: https://github.com/Devesh113/Return_Shield.git
+
+15. Hackathon Deliverables Summary
 Functional fraud detection dashboard
 Explainable AI risk scoring system
 Anomaly detection engine
 API documentation
 Deployment-ready system
-14. Team Roles & Responsibilities
+16. Team Roles & Responsibilities
 Member Name	Role	Responsibilities
 Shikhar Verma	Frontend & Backend Developer	Full-stack development, API integration, backend logic implementation
 Vishwajit Jayswal	UI/UX Developer	Dashboard design, user experience optimization, interface prototyping
 Devesh Kumar Gupta	Researcher	Fraud pattern research, feature engineering strategy, model analysis
-15. Future Scope & Scalability
+17. Future Scope & Scalability
 Short-Term
 Real-time fraud detection
 Advanced dashboard filters
@@ -219,12 +221,12 @@ Graph-based fraud detection
 Deep learning anomaly models
 Adaptive learning systems
 Cross-platform fraud intelligence
-16. Known Limitations
+18. Known Limitations
 Synthetic dataset limitations
 Cold-start user problem
 Possible false positives
 Requires periodic retraining
-17. Impact
+19. Impact
 Reduced financial losses
 Improved fraud detection accuracy
 Lower false positives
