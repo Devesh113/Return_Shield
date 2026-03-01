@@ -1,20 +1,20 @@
 services:
   - type: web
-    name: returnshield-backend
+    name: return-shield-backend
     runtime: python
     rootDir: backend
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
-      - key: DATABASE_URL
-        fromDatabase:
-          name: returnshield-db
-          property: connectionString
       - key: PYTHON_VERSION
         value: "3.11.0"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: return-shield-db
+          property: connectionString
 
 databases:
-  - name: returnshield-db
+  - name: return-shield-db
     databaseName: returnshield
     user: returnshield
     plan: free
