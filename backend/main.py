@@ -18,6 +18,7 @@ app = FastAPI(title="ReturnShield AI API")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
+        "https://return-shield-1.onrender.com",
         "https://return-shield-pi.vercel.app",
         "https://return-shield-pi.vercel.app/",
         "http://localhost:5173",

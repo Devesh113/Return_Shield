@@ -19,8 +19,8 @@ const DashboardPage = () => {
         setLoading(true);
         try {
             const [statsRes, usersRes] = await Promise.all([
-                fetch('/api/dashboard/stats'),
-                fetch('/api/users/suspicious?limit=10')
+                fetch(`https://return-shield-1.onrender.com/api/dashboard/stats`),
+                fetch(`https://return-shield-1.onrender.com/api/users/suspicious?limit=10`)
             ]);
 
             if (statsRes.ok && usersRes.ok) {
