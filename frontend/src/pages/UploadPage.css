@@ -1,0 +1,170 @@
+.upload-container {
+    max-width: 800px;
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.upload-header {
+    text-align: center;
+}
+
+.upload-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.upload-content {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.drop-zone {
+    border: 2px dashed var(--border-color);
+    border-radius: 12px;
+    padding: 4rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.drop-zone:hover {
+    border-color: var(--accent-primary);
+    background: rgba(99, 102, 241, 0.05);
+}
+
+.drop-zone.has-file {
+    border-style: solid;
+    border-color: var(--accent-primary);
+    background: rgba(99, 102, 241, 0.05);
+    padding: 2rem;
+}
+
+.upload-icon {
+    width: 64px;
+    height: 64px;
+    color: var(--accent-primary);
+    margin-bottom: 1rem;
+}
+
+.hidden-input {
+    display: none;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.file-req {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+    background: var(--bg-primary);
+    border-radius: 8px;
+    position: relative;
+}
+
+.file-icon {
+    color: var(--text-secondary);
+}
+
+.file-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.file-name {
+    font-weight: 500;
+}
+
+.file-size {
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+}
+
+.remove-file {
+    position: absolute;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.remove-file:hover {
+    color: var(--danger);
+}
+
+.upload-actions {
+    display: flex;
+    justify-content: center;
+}
+
+.status-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.status-box.processing,
+.status-box.uploading {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--accent-primary);
+}
+
+.status-box.success {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+}
+
+.status-box.error {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--danger);
+}
+
+.status-icon {
+    width: 24px;
+    height: 24px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinning {
+    animation: spin 1s linear infinite;
+}

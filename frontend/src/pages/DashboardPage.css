@@ -1,0 +1,241 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 4rem;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-header h1 {
+    font-size: 2rem;
+}
+
+.loading-state,
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    text-align: center;
+}
+
+.mb-4 {
+    margin-bottom: 2rem;
+}
+
+/* KPI Cards */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.kpi-card {
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem;
+}
+
+.kpi-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: var(--card-color);
+    border-radius: 4px 0 0 4px;
+}
+
+.kpi-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.kpi-title {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.kpi-icon {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem;
+    border-radius: 8px;
+    display: flex;
+}
+
+.kpi-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+}
+
+.kpi-suffix {
+    font-size: 1rem;
+    color: var(--text-tertiary);
+    font-weight: 500;
+}
+
+/* Charts Grid */
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.chart-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 350px;
+}
+
+.chart-card h3 {
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.chart-wrapper {
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+}
+
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pie-legend {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+/* Users Table */
+.table-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.table-header-row {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.data-table th,
+.data-table td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.data-table th {
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.data-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.data-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.data-table tbody tr.row-danger {
+    background-color: rgba(239, 68, 68, 0.03);
+}
+
+.font-mono {
+    font-family: monospace;
+    color: var(--text-secondary);
+}
+
+.score-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.score-badge.high {
+    background: rgba(239, 68, 68, 0.2);
+    color: var(--danger);
+}
+
+.score-badge.med {
+    background: rgba(245, 158, 11, 0.2);
+    color: var(--warning);
+}
+
+.score-badge.low {
+    background: rgba(16, 185, 129, 0.2);
+    color: var(--success);
+}
+
+.flag-yes {
+    color: var(--danger);
+    font-weight: 600;
+}
+
+.flag-no {
+    color: var(--success);
+}
+
+.link-action {
+    color: var(--accent-primary);
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.2s ease;
+}
+
+.link-action:hover {
+    text-decoration-color: var(--accent-primary);
+}
