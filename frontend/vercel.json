@@ -6,7 +6,7 @@
     "rewrites": [
         {
             "source": "/api/:path*",
-            "destination": "https://return-shield-cwgj.onrender.com/:path*"
+            "destination": "https://return-shield-1.onrender.com/:path*"
         },
         {
             "source": "/(.*)",
